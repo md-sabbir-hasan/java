@@ -14,7 +14,7 @@ public class Jan31 {
         for(int i = 1; i<=number; i++){
         if(number % i==0){
         su = su +1;
-            System.out.println(su);
+//            System.out.println(su);
         }
         
        
