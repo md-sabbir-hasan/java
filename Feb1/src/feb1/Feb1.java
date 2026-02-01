@@ -11,6 +11,14 @@ public class Feb1 {
         int input = s.nextInt();
         int res= CheackFactorial(input);
         System.out.println(res);
+        
+        
+        
+        int nu1 = s.nextInt();
+        int nu2 = s.nextInt();
+//        var res = test.larger(nu1, nu2);
+        System.out.println(res);
+                
 //int s = sum();
 //        System.out.println(s);
         
