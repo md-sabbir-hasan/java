@@ -1,20 +1,25 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package home5feb;
 
-/**
- *
- * @author User
- */
+import java.util.Arrays;
+import java.util.Scanner;
+
 public class Home5feb {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+
+        Scanner s = new Scanner(System.in);
+        System.out.println("How many Number Want to push this Array");
+        int count = s.nextInt();
+        int arr[] = new int[count];
+        System.out.println("Before value push " + Arrays.toString(arr));
+        for (int i = 0; i < arr.length; i++) {
+            System.out.println("Enter your " + (i+1) + " value");
+        int userInput = s.nextInt();
+            arr[i] = userInput;
+
+        }
+        System.out.println("After entaring Value " + Arrays.toString(arr));
+
     }
-    
+
 }
