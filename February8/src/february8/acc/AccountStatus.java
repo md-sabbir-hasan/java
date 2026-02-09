@@ -6,6 +6,10 @@ public class AccountStatus {
     private double balance;
     private int deposit;
     private double withdraw;
+   
+    
+    
+    
 
     public int getAccNo() {
         return accNo;

@@ -1,20 +1,17 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
+
 package february9;
 
-/**
- *
- * @author Admin
- */
+import february9.mobile.Android;
+import february9.mobile.Mobile;
+
 public class February9 {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Mobile mobile = new Mobile();
+        mobile.setCall("Call app");
+        mobile.setGallary("Call app");
+        
+        System.out.println("dfgh" + mobile.toString());
     }
     
 }
