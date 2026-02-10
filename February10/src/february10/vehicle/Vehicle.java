@@ -18,10 +18,10 @@ public class Vehicle {
            return regularPrice;
     }
 
-    @Override
-    public String toString() {
-        return "Vehicle{" + "speed=" + speed + ", regularPrice=" + regularPrice + ", color=" + color + '}';
-    }
+//    @Override
+//    public String toString() {
+//        return "Vehicle{" + "speed=" + speed + ", regularPrice=" + regularPrice + ", color=" + color + '}';
+//    }
     
     
 }
