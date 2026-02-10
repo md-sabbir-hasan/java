@@ -64,6 +64,7 @@ public class Android extends Mobile{
         sb.append(", browser=").append(browser);
         sb.append(", touch=").append(touch);
         sb.append(", appStor=").append(appStor);
+        sb.append(", call=").append(super.getCall());
         sb.append('}');
         return sb.toString();
     }
