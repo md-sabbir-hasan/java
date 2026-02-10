@@ -8,7 +8,7 @@ public class February10 {
        
         Truck t = new Truck();
         t.regularPrice=5000;
-        t.weight = 2500;
+        t.weight = 200;
         System.out.println(t.getSalePrice());
     }
     
