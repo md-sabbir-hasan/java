@@ -3,7 +3,7 @@ package february10.vehicle;
 public class Truck extends Vehicle {
 
     public int weight;
-    public double afterPrice;
+   
 
     public Truck() {
     }
