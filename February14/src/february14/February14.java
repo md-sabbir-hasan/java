@@ -1,20 +1,32 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
+
 package february14;
 
-/**
- *
- * @author Admin
- */
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 public class February14 {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        File file = new File("C:\\Users\\Admin\\Desktop\\jv.txt");
+        
+        
+        try {
+            PrintWriter pw = new PrintWriter(file);
+            
+            pw.println("Test");
+            for(int i = 0; i<=100; i++){
+            pw.println(i + " BOSS");
+            } 
+            pw.close();
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(February14.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        
+        
     }
     
 }
