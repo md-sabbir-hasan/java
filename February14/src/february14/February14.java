@@ -4,6 +4,7 @@ package february14;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
+import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -24,7 +25,15 @@ public class February14 {
         } catch (FileNotFoundException ex) {
             Logger.getLogger(February14.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
+        try {
+            Scanner s = new Scanner(file);
+            
+            while(s.hasNext()){
+                System.out.println(s.nextLine());
+            }
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(February14.class.getName()).log(Level.SEVERE, null, ex);
+        }
         
         
     }
