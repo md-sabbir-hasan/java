@@ -1,5 +1,7 @@
 package feb19practice;
 
+import feb19practice.vehicle.Truck;
+
 
 
 public class Feb19Practice {
