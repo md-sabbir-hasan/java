@@ -90,36 +90,47 @@ public class HomePrac {
 
 
 //bubblesort
-
-        int array[] = new int[5];
-
-        for (int i = 0; i < 5; i++) {
-            array[i] = s.nextInt();
-        }
-
-        System.out.println(Arrays.toString(array));
-        
-        
-        for(int i= 0; i<array.length-1; i++){
-        for(int j=0; j<array.length-i-1;j++){
-        if(array[j]>array[j+1]){
-        int temp= array[j+1];
-        array[j+1]=array[j];
-        array[j]=temp;
-        }
-        }
-        }
-        
-//                for (int i = 0; i < array.length - 1; i++) {
-//            for (int j = 0; j < array.length - i - 1; j++) {
-//                if (array[j] > array[j + 1]) {
-//                    int temp = array[j + 1];
-//                    array[j+1] = array[j];
-//                    array[j] = temp;
-//                }
-//            }
+//
+//        int array[] = new int[5];
+//
+//        for (int i = 0; i < 5; i++) {
+//            array[i] = s.nextInt();
 //        }
-System.out.println(Arrays.toString(array));
+//
+//        System.out.println(Arrays.toString(array));
+//        
+//        
+//        for(int i= 0; i<array.length-1; i++){
+//        for(int j=0; j<array.length-i-1;j++){
+//        if(array[j]>array[j+1]){
+//        int temp= array[j+1];
+//        array[j+1]=array[j];
+//        array[j]=temp;
+//        }
+//        }
+//        }       
+//System.out.println(Arrays.toString(array));
+
+
+
+
+//Fibnaccy
+//int input = s.nextInt();
+//        int num1= 0;
+//        int num2 = 1;
+//        int sum = 0;
+//        int totalSum = num1+num2;
+//        
+//        System.out.println(num1);
+//        System.out.println(num2);
+//        
+//        for (int i = 3; i<=input; i++){
+//        sum= num1+num2;
+//            System.out.println(sum);
+//            totalSum +=sum;
+//            num1=num2;
+//            num2=sum;
+//        }
     }
 
 }
