@@ -154,10 +154,7 @@ public class Login extends javax.swing.JFrame {
         String password = TxtPassword.getText().trim();
         
         if(userName.equalsIgnoreCase("java") && password.equals("1234")){
-//            Dashboard1 db = new Dashboard1();
-//            
-//            db.setVisible(true);
-//            this.dispose();
+
             
             Dashboard2 d = new Dashboard2();
             d.setVisible(true);
