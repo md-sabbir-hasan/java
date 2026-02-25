@@ -1,20 +1,15 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
+
 package pos24feb;
 
-/**
- *
- * @author Admin
- */
+import pos24feb.dao.UserDao;
+import pos24feb.model.User;
+
 public class POS24Feb {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        User u = new User("sabbir", "1234");
+        UserDao ud= new UserDao();
+        ud.saveUser(u);
     }
     
 }
