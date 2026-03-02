@@ -11,7 +11,7 @@ import java.util.logging.Logger;
 public class February14 {
 
     public static void main(String[] args) {
-        File file = new File("C:\\Users\\Admin\\Desktop\\jv.txt");
+        File file = new File("C:\\Users\\Admin\\Desktop\\java.txt");
         
         
         try {
