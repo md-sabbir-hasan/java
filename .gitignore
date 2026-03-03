@@ -62,12 +62,16 @@ S
 /POS24Feb/nbproject/private/
 /POS24Feb/build/
 /POS24Feb/dist/
+<<<<<<< HEAD
+/PoS/nbproject/private/
+=======
 /BinaryIO/nbproject/private/
 /BinaryIO/build/
 /March2Prac/nbproject/private/
 /March2Prac/build/
 /BinIOprac/nbproject/private/
 /BinIOprac/build/
+<<<<<<< HEAD
 /MidTermExam/nbproject/private/
 /MidTermExam/build/
 /Mid2/nbproject/private/
@@ -77,3 +81,6 @@ S
 /Sabbir/nbproject/private/
 /Problem/nbproject/private/
 /Problem/build/
+=======
+>>>>>>> 397d7a3c93796fef0612432ada33a77944224d4e
+>>>>>>> 7ddeaebaa1fae0f83d53881d68c9efcacf895f8a
