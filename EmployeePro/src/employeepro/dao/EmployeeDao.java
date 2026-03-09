@@ -10,6 +10,8 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
 
 public class EmployeeDao {
 
@@ -38,7 +40,18 @@ public class EmployeeDao {
 
     }
 
+//    public void showAllEmployee(JTable jt){
+//        
+//         String[] columnsName = {"id", "name", "salary", "email"};
+//        DefaultTableModel tableModel = new DefaultTableModel(columnsName, 0);
+//        jt.setModel(tableModel);
+//    
+//    }
     public List<EmpData> findAllEmp() {
+
+//        String[] columnsName = {"id", "name", "salary", "email"};
+//        DefaultTableModel tableModel = new DefaultTableModel(columnsName, 0);
+//        jt.setModel(tableModel);
         sql = "select * from employee";
 
         List<EmpData> eList = new ArrayList<>();
@@ -51,11 +64,11 @@ public class EmployeeDao {
                         rs.getDouble("salary"),
                         rs.getString("email"));
                 eList.add(e);
-                ps.close();
-                rs.close();
-                util.getCon().close();
 
             }
+            ps.close();
+            rs.close();
+            util.getCon().close();
         } catch (SQLException ex) {
             Logger.getLogger(EmployeeDao.class.getName()).log(Level.SEVERE, null, ex);
         }

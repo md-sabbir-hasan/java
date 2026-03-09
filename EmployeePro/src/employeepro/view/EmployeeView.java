@@ -4,12 +4,17 @@
  */
 package employeepro.view;
 
+import employeepro.dao.EmployeeDao;
+import employeepro.model.EmpData;
 import employeepro.util.DbUtil;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.List;
+import java.util.Locale;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -18,12 +23,40 @@ import javax.swing.JOptionPane;
 public class EmployeeView extends javax.swing.JFrame {
 
     DbUtil db = new DbUtil();
+    EmployeeDao ed = new EmployeeDao();
 
     /**
      * Creates new form EmployeeView
      */
     public EmployeeView() {
         initComponents();
+        showAllEmployee();
+        
+    }
+    
+    public void showAllEmployee(){
+   
+
+        String[] column = {"ID", "Name", "Salary", "Email"};
+        DefaultTableModel model = new DefaultTableModel();
+        model.setColumnIdentifiers(column);
+        tblEmployee.setModel(model);
+
+        List<EmpData> eList = ed.findAllEmp();
+        
+        
+        for (EmpData e : eList) {
+            model.addRow(new Object[]{e.getId(), e.getName(), e.getSalary(), e.getEmail()});
+        }
+
+    
+    }
+    
+        public void clearData() {
+        txtEmployeId.setText("");
+        txtEmployeeName.setText("");
+        txtEmployeeEmail.setText("");
+        txtEmployeeSalary.setText("");
     }
 
     public void saveStudent() {
@@ -41,6 +74,7 @@ public class EmployeeView extends javax.swing.JFrame {
 
             ps.close();
             db.getCon().close();
+           
 
             JOptionPane.showMessageDialog(this, "Successfully Add");
         } catch (SQLException ex) {
@@ -50,6 +84,9 @@ public class EmployeeView extends javax.swing.JFrame {
         }
 
     }
+    
+    
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -78,7 +115,7 @@ public class EmployeeView extends javax.swing.JFrame {
         jButton4 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tblEmployee = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -134,8 +171,8 @@ public class EmployeeView extends javax.swing.JFrame {
 
         jPanel3.setBackground(new java.awt.Color(204, 204, 255));
 
-        jTable1.setBackground(new java.awt.Color(204, 204, 255));
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tblEmployee.setBackground(new java.awt.Color(204, 204, 255));
+        tblEmployee.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -146,7 +183,12 @@ public class EmployeeView extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        tblEmployee.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tblEmployeeMouseClicked(evt);
+            }
+        });
+        jScrollPane1.setViewportView(tblEmployee);
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -257,6 +299,10 @@ public class EmployeeView extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1MouseClicked
 
+    private void tblEmployeeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblEmployeeMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tblEmployeeMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -307,7 +353,7 @@ public class EmployeeView extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JTable tblEmployee;
     private javax.swing.JTextField txtEmployeId;
     private javax.swing.JTextField txtEmployeeEmail;
     private javax.swing.JTextField txtEmployeeName;
